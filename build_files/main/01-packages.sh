@@ -48,6 +48,7 @@ echo "==Installing supporting packages for GNOME=="
 # and certain essential apps not part of GNOME Core
 pacman -Syu --noconfirm \
   bazaar \
+  firewalld \
   fprintd \
   fwupd \
   networkmanager \
@@ -55,11 +56,19 @@ pacman -Syu --noconfirm \
   ptyxis \
   system-config-printer
 
+echo "==Installing container tools=="
+pacman -Syu --noconfirm \
+  crun
+  distrobox
+  toolbox
+  podman
+
 echo "==Installing extra packages=="
 # Extra packages
 pacman -Syu --noconfirm \
   fastfetch \
   fish \
+  git \
   iwd \
   intel-lpmd \
   micro \
