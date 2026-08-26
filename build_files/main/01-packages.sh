@@ -58,9 +58,9 @@ pacman -Syu --noconfirm \
 
 echo "==Installing container tools=="
 pacman -Syu --noconfirm \
-  crun
-  distrobox
-  toolbox
+  crun \
+  distrobox \
+  toolbox \
   podman
 
 echo "==Installing extra packages=="
