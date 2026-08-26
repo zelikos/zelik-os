@@ -14,6 +14,7 @@ pacman -Syu --noconfirm \
   gnome-color-manager \
   gnome-control-center \
   gnome-disk-utility \
+  gnome-initial-setup \
   gnome-keyring \
   gnome-remote-desktop \
   gnome-session \
