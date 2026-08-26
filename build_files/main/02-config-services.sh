@@ -19,6 +19,7 @@ echo "===Configuring systemd services==="
 
 systemctl enable dconf-update.service
 systemctl enable bootc-automatic-updates.timer
+systemctl enable gdm.service
 
 #Add the Flathub Flatpak remote
 flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
