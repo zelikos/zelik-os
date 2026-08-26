@@ -7,7 +7,7 @@ echo "===Installing packages==="
 
 
 echo "==Installing base packages=="
-pacman -Syu --noconfirm
+pacman -Syu --noconfirm \
   crun \ # Preferred container runtime
   git \
   gst-plugin-pipewire \
