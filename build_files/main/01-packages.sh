@@ -6,6 +6,22 @@ set -ouex pipefail
 echo "===Installing packages==="
 
 
+echo "==Installing base packages=="
+pacman -Syu --noconfirm
+  crun \ # Preferred container runtime
+  git \
+  gst-plugin-pipewire \
+  oo7 \ # Secrets handler
+  plymouth \
+  pipewire \
+  pipewire-alsa \
+  pipewire-jack \
+  pipewire-pulse \
+  podman \ # Required for bootc updates, and as distrobox/toolbox backend
+  vulkan-intel \
+  vulkan-radeon \
+  wireplumber
+
 echo "==Installing GNOME desktop=="
 # GNOME Packages
 pacman -Syu --noconfirm \
@@ -15,7 +31,6 @@ pacman -Syu --noconfirm \
   gnome-control-center \
   gnome-disk-utility \
   gnome-initial-setup \
-  gnome-keyring \
   gnome-remote-desktop \
   gnome-session \
   gnome-settings-daemon \
@@ -56,21 +71,16 @@ pacman -Syu --noconfirm \
   ptyxis \
   system-config-printer
 
-echo "==Installing container tools=="
-pacman -Syu --noconfirm \
-  crun \
-  distrobox \
-  toolbox \
-  podman
-
 echo "==Installing extra packages=="
 # Extra packages
 pacman -Syu --noconfirm \
+  chezmoi \
+  distrobox \
   fastfetch \
   fish \
-  git \
   iwd \
   intel-lpmd \
   micro \
   nvtop \
-  thermald
+  thermald \
+  toolbox
