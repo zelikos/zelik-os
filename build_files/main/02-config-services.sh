@@ -17,9 +17,13 @@ glib-compile-schemas /usr/share/glib-2.0/schemas &>/dev/null
 
 echo "===Configuring systemd services==="
 
-systemctl enable dconf-update.service
 systemctl enable bootc-automatic-updates.timer
+systemctl enable dconf-update.service
+systemctl enable firewalld.service
 systemctl enable gdm.service
+systemctl enable intel_lpmd.service
+systemctl enable NetworkManager.service
+systemctl enable thermald.service
 
 #Add the Flathub Flatpak remote
 flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
