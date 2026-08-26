@@ -1,0 +1,26 @@
+name: Build Zelik OS
+on:
+  schedule:
+    - cron:
+        "00 06 * * 0" # build at 06:00 UTC every Sunday
+        # (20 minutes after last ublue images start building)
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "./**.md"
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "./**.md"
+  workflow_dispatch: # allow manually triggering builds
+
+jobs:
+  build_stable:
+    name: Zelik OS
+    uses: ./.github/workflows/reusable-build-image.yml
+    secrets: inherit
+    with:
+      image: zelik-os
+      stream_name: latest
