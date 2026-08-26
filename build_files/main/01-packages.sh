@@ -45,10 +45,15 @@ pacman -Syu --noconfirm \
 
 echo "==Installing supporting packages for GNOME=="
 # Complementary packages for GNOME desktop functionality
+# and certain essential apps not part of GNOME Core
 pacman -Syu --noconfirm \
   bazaar \
   fprintd \
-  power-profiles-daemon
+  fwupd \
+  networkmanager \
+  power-profiles-daemon \
+  ptyxis \
+  system-config-printer
 
 echo "==Installing extra packages=="
 # Extra packages
