@@ -8,16 +8,16 @@ echo "===Installing packages==="
 
 echo "==Installing base packages=="
 pacman -Syu --noconfirm \
-  crun \ # Preferred container runtime
+  crun \
   git \
   gst-plugin-pipewire \
-  oo7 \ # Secrets handler
+  oo7 \
   plymouth \
   pipewire \
   pipewire-alsa \
   pipewire-jack \
   pipewire-pulse \
-  podman \ # Required for bootc updates, and as distrobox/toolbox backend
+  podman \
   vulkan-intel \
   vulkan-radeon \
   wireplumber
