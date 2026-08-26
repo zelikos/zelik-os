@@ -22,7 +22,7 @@ if [[ $1 == "--check" ]]; then
 #       echo "Error: Branch $branch not recognized."
 #       exit 1
 #       ;;
-  esac
+#  esac
 else
   echo "Beginning full system update..."
 
