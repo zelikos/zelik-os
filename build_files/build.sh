@@ -6,6 +6,8 @@ mkdir -p /var/roothome
 
 echo "===Copying files==="
 
+pacman -Syu --noconfirm rsync
+
 rsync -rvK /ctx/system_files/shared/ /
 rsync -rvK /ctx/system_files/gnome/ /
 
@@ -20,3 +22,5 @@ rsync -rvK /ctx/system_files/gnome/ /
 
 # Overrides
 /ctx/build_files/main/03-overrides.sh
+
+pacman -Rs --noconfirm rsync
