@@ -10,6 +10,7 @@ echo "==Installing base packages=="
 pacman -Syu --noconfirm \
   crun \
   git \
+  glibc-locales \
   gst-plugin-pipewire \
   less \
   plymouth \
