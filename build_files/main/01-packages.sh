@@ -11,7 +11,6 @@ pacman -Syu --noconfirm \
   crun \
   git \
   gst-plugin-pipewire \
-  oo7 \
   plymouth \
   pipewire \
   pipewire-alsa \
@@ -31,6 +30,7 @@ pacman -Syu --noconfirm \
   gnome-control-center \
   gnome-disk-utility \
   gnome-initial-setup \
+  gnome-keyring \
   gnome-remote-desktop \
   gnome-session \
   gnome-settings-daemon \
