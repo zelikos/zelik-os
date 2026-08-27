@@ -11,6 +11,7 @@ pacman -Syu --noconfirm \
   crun \
   git \
   gst-plugin-pipewire \
+  less \
   plymouth \
   pipewire \
   pipewire-alsa \
@@ -63,7 +64,6 @@ echo "==Installing supporting packages for GNOME=="
 # and certain essential apps not part of GNOME Core
 pacman -Syu --noconfirm \
   bazaar \
-  firewalld \
   fprintd \
   fwupd \
   networkmanager \
