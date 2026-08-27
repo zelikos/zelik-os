@@ -9,6 +9,9 @@ favorite-apps = ['org.gnome.Nautilus.desktop', 'org.gnome.Epiphany.desktop', 'or
 [org.gnome.mutter]
 check-alive-timeout=uint32 20000
 
+[org.gnome.desktop.interface]
+accent-color="slate"
+
 [org.gnome.nautilus.icon-view]
 captions = ['size', 'none', 'none']
 
