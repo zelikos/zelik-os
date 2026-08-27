@@ -18,6 +18,7 @@ glib-compile-schemas /usr/share/glib-2.0/schemas &>/dev/null
 echo "===Configuring systemd services==="
 
 systemctl enable bootc-automatic-updates.timer
+systemctl enable cups.socket
 systemctl enable dconf-update.service
 #systemctl enable firewalld.service
 systemctl enable gdm.service
