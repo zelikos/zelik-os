@@ -6,7 +6,7 @@ set -ouex pipefail
 echo "===Applying overrides==="
 
 # Hide launchers for CLI programs and other extras
-for file in avahi-discover bssh bvnc fish htop lstopo micro nvtop qv4l2 qvidcap; do
+for file in avahi-discover bssh bvnc cups fish htop lstopo micro nvtop qv4l2 qvidcap; do
     if [[ -f "/usr/share/applications/$file.desktop" ]]; then
         sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nHidden=true@g' /usr/share/applications/"$file".desktop
     fi
