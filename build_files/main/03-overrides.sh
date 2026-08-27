@@ -14,4 +14,4 @@ done
 
 # Link /usr/lib/oo7-daemon to /usr/bin/oo7-daemon for oo7 PAM module
 # https://github.com/linux-credentials/oo7/issues/516
-ln -s /usr/lib/oo7-daemon /usr/bin/oo7-daemon
+# ln -s /usr/lib/oo7-daemon /usr/bin/oo7-daemon
