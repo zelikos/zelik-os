@@ -9,16 +9,25 @@ echo "===Installing packages==="
 echo "==Installing base packages=="
 pacman -Syu --noconfirm \
   crun \
+  cups \
+  fprintd \
+  fwupd \
   git \
   glibc-locales \
   gst-plugin-pipewire \
+  intel-lpmd \
+  ipp-usb \
+  iwd \
   less \
+  networkmanager \
   plymouth \
   pipewire \
   pipewire-alsa \
   pipewire-jack \
   pipewire-pulse \
   podman \
+  power-profiles-daemon \
+  thermald \
   vulkan-intel \
   vulkan-radeon \
   wireplumber
@@ -60,28 +69,19 @@ pacman -Syu --noconfirm \
   xdg-user-dirs-gtk \
   yelp
 
-echo "==Installing supporting packages for GNOME=="
-# Complementary packages for GNOME desktop functionality
-# and certain essential apps not part of GNOME Core
+echo "==Installing extra GNOME apps=="
+# Certain essential apps that are not part of GNOME Core
 pacman -Syu --noconfirm \
   bazaar \
-  fprintd \
-  fwupd \
-  networkmanager \
-  power-profiles-daemon \
-  ptyxis \
-  system-config-printer
+  ptyxis
 
 echo "==Installing extra packages=="
-# Extra packages
+# Extra packages that aren't necessary for core system functionality
 pacman -Syu --noconfirm \
   chezmoi \
   distrobox \
   fastfetch \
   fish \
-  iwd \
-  intel-lpmd \
   micro \
   nvtop \
-  thermald \
   toolbox
