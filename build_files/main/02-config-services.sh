@@ -19,7 +19,7 @@ echo "===Configuring systemd services==="
 
 systemctl enable bootc-automatic-updates.timer
 systemctl enable dconf-update.service
-systemctl enable firewalld.service
+#systemctl enable firewalld.service
 systemctl enable gdm.service
 systemctl enable intel_lpmd.service
 systemctl enable NetworkManager.service
