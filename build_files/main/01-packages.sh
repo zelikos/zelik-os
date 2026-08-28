@@ -10,6 +10,7 @@ echo "==Installing base packages=="
 pacman -Syu --noconfirm \
   crun \
   cups \
+  evolution-data-server \
   fprintd \
   fwupd \
   git \
