@@ -28,6 +28,8 @@ pacman -Syu --noconfirm \
   podman \
   power-profiles-daemon \
   thermald \
+  udisks2-btrfs \
+  udisks2-lvm2 \
   vulkan-intel \
   vulkan-radeon \
   wireplumber
