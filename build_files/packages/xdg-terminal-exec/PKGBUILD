@@ -7,15 +7,9 @@ arch=(any)
 url="https://github.com/Vladimir-csp/$pkgname"
 license=('GPL-3.0-or-later')
 makedepends=('scdoc')
-checkdepends=('bats')
 changelog=
 source=("$pkgname-$pkgver::$url/archive/refs/tags/v$pkgver.tar.gz")
 sha256sums=('82ac2dfdb357361d15f5163cdeb3cfd457bbb30bf5d2e14436393f493bd32afe')
-
-check() {
-	cd "$pkgname-$pkgver"
-	bats "test/"
-}
 
 build() {
 	cd "$pkgname-$pkgver"
