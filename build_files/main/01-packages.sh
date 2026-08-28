@@ -11,6 +11,7 @@ pacman -Syu --noconfirm \
   crun \
   cups \
   evolution-data-server \
+  firewalld \
   fprintd \
   fwupd \
   git \
