@@ -81,10 +81,17 @@ pacman -Syu --noconfirm \
 echo "==Installing extra packages=="
 # Extra packages that aren't necessary for core system functionality
 pacman -Syu --noconfirm \
+  bat \
   chezmoi \
   distrobox \
+  eza \
   fastfetch \
+  fd \
   fish \
   micro \
   nvtop \
-  toolbox
+  ripgrep \
+  starship \
+  tealdeer \
+  toolbox \
+  zoxide
