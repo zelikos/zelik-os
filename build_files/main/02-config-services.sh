@@ -26,10 +26,5 @@ systemctl enable intel_lpmd.service
 systemctl enable NetworkManager.service
 systemctl enable thermald.service
 
-echo "===Applying firewalld config==="
-
-sed -i "s/^IPv6_rpfilter=.*/IPv6_rpfilter=loose/" /etc/firewalld/firewalld.conf
-sed -i "s/^DefaultZone=.*/DefaultZone=lax/" /etc/firewalld/firewalld.conf
-
 #Add the Flathub Flatpak remote
 flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
