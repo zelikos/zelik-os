@@ -23,7 +23,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
 # initramfs
 RUN --mount=type=tmpfs,dst=/tmp --mount=type=tmpfs,dst=/root \
     --mount=type=bind,from=ctx,source=/,target=/ctx \
-    /ctx/build_files/shared/initramfs.sh
+    /ctx/build_files/shared/01-initramfs.sh
 
 ### LINTING
 ## Verify final image and contents are correct.
