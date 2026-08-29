@@ -17,10 +17,13 @@ rsync -rvK /ctx/system_files/gnome/ /
 # Enable extra repositories & install packages
 /ctx/build_files/main/01-packages.sh
 
+# Custom PKGBUILDs
+/ctx/build_files/main/02-PKGBUILDs.sh
+
 # systemd services, gschemas, etc
-/ctx/build_files/main/02-config-services.sh
+/ctx/build_files/main/03-config-services.sh
 
 # Overrides
-/ctx/build_files/main/03-overrides.sh
+/ctx/build_files/main/04-overrides.sh
 
 pacman -Rs --noconfirm rsync
