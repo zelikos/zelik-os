@@ -26,5 +26,12 @@ systemctl enable intel_lpmd.service
 systemctl enable NetworkManager.service
 systemctl enable thermald.service
 
+# Derived from Bluefin Dakota's zswap configuration: https://github.com/projectbluefin/dakota/blob/testing/elements/bluefin/swapfile.bst
+echo "===Enabling swapfile for zswap==="
+
+install -d "/usr/lib/systemd/system/swap.target.wants"
+ln -sf /usr/lib/systemd/system/var-swap-swapfile.swap \
+           "/usr/lib/systemd/system/swap.target.wants/var-swap-swapfile.swap"
+
 #Add the Flathub Flatpak remote
 flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
