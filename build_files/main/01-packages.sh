@@ -20,6 +20,7 @@ pacman -Syu --noconfirm \
   intel-lpmd \
   ipp-usb \
   iwd \
+  just \
   less \
   networkmanager \
   plymouth \
