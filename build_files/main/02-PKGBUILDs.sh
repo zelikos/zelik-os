@@ -10,7 +10,7 @@ mkdir /tmp/packages/ && cp -r /ctx/build_files/packages/ /tmp/pkgbuilds/
 
 # Add build user to run makepkg, as makepkg cannot be run as root
 useradd --no-create-home --shell=/bin/false build && usermod -L build
-echo "build ALL=(ALL) NOPASSWD: /usr/bin/pacman" >> /etc/sudoers
+echo "build ALL=(ALL) NOPASSWD: /usr/bin/pacman" >> /etc/sudoers.d/build-pacman
 chown -Rc build /tmp/pkgbuilds
 
 # makepkg -srfci
@@ -25,4 +25,5 @@ runuser -u build -- makepkg -srfci --noconfirm -D /tmp/pkgbuilds/xdg-terminal-ex
 
 # Cleanup
 userdel build
+rm /etc/sudoers.d/build-pacman
 pacman -Rs --noconfirm base-devel
