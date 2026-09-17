@@ -69,6 +69,7 @@ pacman -Syu --noconfirm \
   nautilus \
   orca \
   rygel \
+  sushi \
   tecla \
   xdg-desktop-portal-gnome \
   xdg-user-dirs-gtk \
